@@ -5,11 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script text="text/javascript" src="JS/ejercicio1.js"></script>
+    
+    <style>
+        #caja{
+            width: 300px;
+            height: 200px;
+            border: 2px solid green;
+        }
+        #resultado{
+            width: 300px;
+           border: 2px solid green;
+        }
+        p{
+             width: 30%;
+             border:2px solid rgb(12, 102, 114);
+             line-height: 20px;
+         }
+     </style>
 </head>
 <body>
-    <h1>Validacion de par de llaves</h1>
-    
-    <div id="array"></div>
+    <h1>Ejercicio 1</h1>
+    <p>Dado un string formado por (),[],{}, escribe un programa que indique si los pares correspondientes son correctos
+        <br>Entrada [()]{}{[()()]}->Correctos
+        <br>Entrada [(]]->Incorrecto
+    </p>
+    <div id="resultado"></div>
+    <script text="text/javascript" src="JS/ejercicio1.js"></script>
 </body>
 </html>

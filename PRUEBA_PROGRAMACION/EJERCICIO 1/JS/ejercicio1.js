@@ -1,9 +1,10 @@
-// De una cadena de texto de n longitud, 
+
 // diseñar un programa que obtenga el 
 // numero de veces que se repite una palabra en el texto
 
-const texto = '[(]]'
-
+const texto = prompt("Ingrese el ejercicio a validar");
+//Variables para contar la cantidad de veces que se repite
+//Un elemento dentro del array
 let corchetes_1 = 0;
 let corchetes_2 = 0;
 
@@ -14,7 +15,8 @@ let llaves_1 = 0;
 let llaves_2 = 0;
 
 let otros = 0
-
+//Por cada vez que encuentre un elemento dentro del string
+//a;adira dentro un +1 a cada varible segun la condicion encontrada
 for (let c of texto) {
     if (c === '[') {
         corchetes_1 += 1;
@@ -30,7 +32,11 @@ for (let c of texto) {
         llaves_2 += 1;
     } else otros += 1;
 }
-
+/*
+Al final se realiza una comparacion de las variables para revisar si la cantidad
+de elementos coincide y asi si encuentra que los elementos de apertura
+y cierre son iguales el string esta correcto, sino, el elemento esta incorrecto
+*/
 if (corchetes_1 != corchetes_2 || parentesis_1 != parentesis_2 || llaves_1 != llaves_2) {
-    console.log('Incorrecto');
-} else console.log('Correcto');
+    document.querySelector("#resultado").innerHTML=`El string <b>${texto}</b> recibido, esta <b>INCORRECTO</b>`;
+} else     document.querySelector("#resultado").innerHTML=`El string <b>${texto}</b> recibido, esta <b>CORRECTO</b>`;
